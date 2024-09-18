@@ -530,7 +530,7 @@ services:
       - {{ key }}={{ value }}
     {% endfor %}
     volumes:
-      - ${HMSD_APPS_PATH}/transmission/config:/config
+      - ${HMSD_APPS_PATH}/transmission_native/config:/config
       - ${HMSD_MOUNT_PATH}:/data
     ports:
       - 9091:9091
