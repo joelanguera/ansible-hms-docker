@@ -526,6 +526,9 @@ services:
       - TRANSMISSION_INCOMPLETE_DIR_ENABLED=false
       - TRANSMISSION_WATCH_DIR_ENABLED=false
       - LOCAL_NETWORK={{ hms_docker_network_subnet }}
+    {% for key, value in transmission_additional_env_vars.items() %}
+      - {{ key }}={{ value }}
+    {% endfor %}
     volumes:
       - ${HMSD_APPS_PATH}/transmission/config:/config
       - ${HMSD_MOUNT_PATH}:/data
