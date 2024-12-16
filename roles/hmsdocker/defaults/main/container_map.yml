@@ -61,6 +61,9 @@ hms_docker_container_map:
   transmission_native:
     enabled: yes
     directory: yes
+  qbittorrent:
+    enabled: yes
+    directory: yes
   portainer:
     enabled: yes
     proxy_host_rule: portainer
